@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # Started apps
     'todo_app',
+    'users',
 
     # Others
     'rest_framework',
