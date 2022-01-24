@@ -1,16 +1,11 @@
-from django.shortcuts import render
 from rest_framework.decorators import api_view
-from rest_framework.generics import RetrieveUpdateDestroyAPIView, CreateAPIView, ListAPIView, get_object_or_404, \
-    GenericAPIView
-from rest_framework import permissions
+from rest_framework.generics import RetrieveUpdateDestroyAPIView, CreateAPIView, ListAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
-from rest_framework.views import APIView
 from todo_app.models import Task
 from todo_app.serializers import TaskListSerializer, TaskCreateSerializer, TaskDetailSerializer
 from users.backends import JWTAuthentication
-from datetime import datetime
 from todo_app.permissions import IsOwnerOrReadOnly
 
 
